@@ -14,7 +14,8 @@ st.sidebar.write('')
 image = "wines.jpg"
 st.sidebar.image(image, use_column_width=True)
 
-alcohol = st.sidebar.selectbox('Alcohol', df['alcohol'].unique())
+alcohol = st.sidebar.selectbox('Alcohol', sorted(df['alcohol'].unique()))
+
 
 sulphate = st.sidebar.selectbox('Sulphate', df['sulphates'].unique())
 
