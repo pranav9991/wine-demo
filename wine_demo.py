@@ -37,8 +37,7 @@ if st.sidebar.button('Predict Wine Quality'):
 
     st.markdown("---")
 
-    # Adjust the scaling logic
-    quality_categories = ["Worst", "Poor", "Below Average", "Average", "Above Average", "Good", "Excellent", "Best"]
-    quality_index = min(max(int(prediction), 0), len(quality_categories) - 1)
-    quality = quality_categories[quality_index]
+    # Map prediction to quality categories
+    quality_categories = {3: "Worst", 4: "Average", 5: "Above Average", 6: "Good", 7: "Excellent", 8: "Best"}
+    quality = quality_categories.get(prediction, "Unknown")
     st.info(f"### Predicted Wine Quality: {quality}")
