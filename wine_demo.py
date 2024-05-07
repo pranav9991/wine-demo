@@ -15,13 +15,9 @@ image = "wines.jpg"
 st.sidebar.image(image, use_column_width=True)
 
 alcohol = st.sidebar.selectbox('Alcohol', sorted(df['alcohol'].unique()))
-
-
-sulphate = st.sidebar.selectbox('Sulphate', df['sulphates'].unique())
-
-volatile = st.sidebar.selectbox('Volatile Acidity', df['volatile acidity'].unique())
-
-tsd = st.sidebar.selectbox('Sulphur dioxide', df['total sulfur dioxide'].unique())
+sulphate = st.sidebar.selectbox('Sulphate', sorted(df['sulphates'].unique()))
+volatile = st.sidebar.selectbox('Volatile Acidity', sorted(df['volatile acidity'].unique()))
+tsd = st.sidebar.selectbox('Sulphur dioxide', sorted(df['total sulfur dioxide'].unique()))
 
 logo_image = "wine.png"
 st.image(logo_image, use_column_width=True)
